@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>SoulPod Moss Airdrop</title>
+
+    <style>
+
+        body {
+            height: 100vh;
+            background-color: #2a2200;
+            color: #ffffdc;
+        }
+
+        a {
+            color: #ffffdc;
+        }
+        a:hover {
+            color: #c4c4b6;
+            text-decoration: none;
+        }
+
+        .dialog {
+            background-color: #201a00;
+            border-radius: 0.5em;
+            margin: 0.5em;
+            padding: 1em;
+
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="page" class="row align-items-center h-100">
+        <div class="col12 text-center">
+            <h1><img src="logo.png" alt="SoulPod Moss" width="384"></h1>
+            <div id="dialog-main-loading" class="dialog">
+                Loading...
+            </div>
+            <div id="dialog-connect" class="dialog" hidden>
+                <em>Check your eligiblity for the SoulPod Moss airdrop and add assets.</em><br><br>
+                Connect using MyAlgoWallet<br>
+                <button class="btn btn-primary">Connect</button><br><br>
+                <small>Or <a href=# id="add-manually">add assets manually</a></small>
+            </div>
+            <div id="dialog-optin" class="dialog" hidden>
+                <span id="address"></span><br>
+                <span class="text-success">You're eligible for the airdrop!</span><br>
+                Assets to add: <span id="assets"></span><br>
+                <button class="btn btn-primary">Add Assets</button>
+            </div>
+            <div id="dialog-not-eligible" class="dialog" hidden>
+                <span class="text-warning"><span id="address"></span><br>
+                is not eligible for the airdrop.</span><br>
+                Make sure that required assets are in your wallet, not listed on marketplaces.<br>
+            </div>
+            <div id="dialog-busy" class="dialog" hidden>
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div><br>
+                <span id="message"></span>
+            </div>
+            <div id="dialog-add-manually" class="dialog" hidden>
+                Please enter your wallet address:<br>
+                    <input type="text" class="form-control m-2" placeholder="Wallet address" />
+                    <button class="btn btn-primary">OK</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="myalgo.min.js" defer></script>
+    <script src="https://unpkg.com/algosdk@v1.15.0/dist/browser/algosdk.min.js"
+        integrity="sha384-wURu1H0s7z6Nj/AiP4O+0EorWZNvjiXwex7pNwtJH77x60mNs0Wm2zR37iUtHMwH"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
